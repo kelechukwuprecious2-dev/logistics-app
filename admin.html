@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Admin Dashboard</title>
+</head>
+<body>
+
+  <h2>Admin Dashboard - Create Shipment</h2>
+
+  
+<!-- CREATE SHIPMENT FORM -->
+<input id="sender" placeholder="Sender Name"><br><br>
+
+<input id="receiver" placeholder="Receiver Name"><br><br>
+
+<input id="senderAddress" placeholder="Sender Address"><br><br>
+
+<input id="receiverAddress" placeholder="Receiver Address"><br><br>
+
+<input id="phone" placeholder="Receiver Phone Number"><br><br>
+
+<select id="status">
+  <option value="Pending">Pending</option>
+  <option value="In Transit">In Transit</option>
+  <option value="Delivered">Delivered</option>
+</select><br><br>
+
+<button onclick="createShipment()">Create Shipment</button>
+
+  <hr>
+
+  <h2>All Shipments</h2>
+
+  <!-- SHIPMENTS WILL SHOW HERE -->
+  <div id="shipmentList"></div>
+
+  <hr>
+
+  <!-- LINK TO USER PAGE -->
+  <a href="track.html">Go to Tracking Page</a>
+
+  <!-- CONNECT TO JS -->
+  <script src="app.js"></script>
+
+</body>
+</html>

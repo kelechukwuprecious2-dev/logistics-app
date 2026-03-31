@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ProShip - Create Shipment</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>ProShip Logistics 🚚</h1>
+</header>
+<div style="text-align:center; margin-top:50px;">
+  <h2>Track Your Package</h2>
+
+  <input id="trackInput" placeholder="Enter Tracking Number" style="padding:10px;">
+  <button onclick="trackShipment()" style="padding:10px;">Track</button>
+
+  <div id="result" style="margin-top:20px;"></div>
+</div>
+
+<div class="container">
+
+  <!-- Shipment Creation Form -->
+  <h2>Create New Shipment</h2>
+  <form id="shipmentForm" onsubmit="event.preventDefault()">
+    <input type="text" id="sender" placeholder="Sender Name" required><br><br>
+    <input type="text" id="receiver" placeholder="Receiver Name" required><br><br>
+    <input type="text" id="receiverNumber" placeholder="Receiver Phone Number" required><br><br>
+    <input type="text" id="origin" placeholder="Origin" required><br><br>
+    <input type="text" id="destination" placeholder="Destination" required><br><br>
+    <input type="number" id="weight" placeholder="Weight (kg)" required><br><br>
+    <button type="submit">Create Shipment</button>
+  </form>
+
+  <!-- Display tracking number -->
+  <div id="trackingDisplay" style="margin-top: 20px; font-weight: bold; color: green;"></div>
+
+  <!-- Contact Admin -->
+  <h3>Contact Admin</h3>
+  <form id="contactForm" onsubmit="event.preventDefault()">
+    <input type="text" id="userName" placeholder="Your Name" required><br><br>
+    <input type="text" id="userMessage" placeholder="Your Message" required><br><br>
+    <button type="button" onclick="sendMessage()">Send Message</button>
+  </form>
+  <p id="msgStatus"></p>
+
+</div>
+
+</body>

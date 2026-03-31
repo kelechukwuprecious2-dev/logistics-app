@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Track Your Package</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .tracking-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #2a5298;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1e3c72;
+    }
+
+    #result {
+      margin-top: 20px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+
+    .card h3 {
+      margin: 0 0 10px 0;
+      color: #2a5298;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Track Your Package</h2>
+
+  <div class="tracking-container">
+    <input id="trackInput" placeholder="Enter Tracking Number">
+    <button onclick="trackShipment()">Track</button>
+
+    <div id="result"></div>
+  </div>
+  <div style="margin-top:10px;">
+  <input type="text" id="userNoteInput" placeholder="Add note / report">
+  <button onclick="addUserNote()">Send Note</button>
+</div>
+
+  <!-- CONNECT TO APP.JS -->
+  <script src="app.js"></script>
+
+</body>
+</html>
